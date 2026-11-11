@@ -1,0 +1,45 @@
+[package]
+name = "baryplot"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Interactive barycentric rational approximation and complex-function visualization."
+readme = "README.md"
+keywords = ["rational", "approximation", "plotting", "iced", "mathematics"]
+categories = ["science", "visualization", "gui"]
+
+[dependencies]
+colorous = "1.0.16"
+faer = { version = "0.24.4", default-features = false, features = ["std", "rayon", "linalg"] }
+fearless_simd = "1.2.0"
+iced = { git = "https://github.com/iced-rs/iced.git", rev = "c3d2cfd0a8503fd4b13754467953b427be259c55", version = "0.15.0-dev", default-features = false, features = ["advanced", "wgpu", "canvas", "image-without-codecs", "smol", "x11", "wayland", "wayland-dlopen", "linux-theme-detection"] }
+num-complex = { version = "0.4.6", features = ["serde"] }
+rayon = "1.12.0"
+rmp-serde = "1.3.1"
+serde = { version = "1.0.229", features = ["derive", "rc"] }
+serde_json = { version = "1.0.154", features = ["float_roundtrip"] }
+smol = "2.0.2"
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+lto = "fat"
+strip = "symbols"
+debug = 0
+
+[profile.profiling]
+inherits = "release"
+debug = 1
+strip = "none"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[dev-dependencies]
+iced = { git = "https://github.com/iced-rs/iced.git", rev = "c3d2cfd0a8503fd4b13754467953b427be259c55", default-features = false, features = ["tiny-skia"] }
+iced_tiny_skia = { git = "https://github.com/iced-rs/iced.git", rev = "c3d2cfd0a8503fd4b13754467953b427be259c55" }
+iced_runtime = { git = "https://github.com/iced-rs/iced.git", rev = "c3d2cfd0a8503fd4b13754467953b427be259c55" }
+tiny-skia = "0.12.0"

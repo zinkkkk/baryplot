@@ -1,0 +1,185 @@
+{
+  "entries": [
+    {
+      "name": "p1",
+      "expressions": [
+        "-a",
+        "1",
+        "1"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#61D6C2",
+      "real_y": [
+        0,
+        1.0,
+        -1.0
+      ]
+    },
+    {
+      "name": "p2",
+      "expressions": [
+        "0",
+        "-1",
+        "-2"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#FFB86C",
+      "real_y": [
+        0,
+        1.2,
+        -1.2
+      ]
+    },
+    {
+      "name": "p3",
+      "expressions": [
+        "a",
+        "1",
+        "1"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#AB9DF2",
+      "real_y": [
+        0,
+        1.4,
+        -1.4
+      ]
+    }
+  ],
+  "globals": [
+    {
+      "kind": "Variable",
+      "name": "a",
+      "parameters": "",
+      "expression": "2"
+    },
+    {
+      "kind": "Function",
+      "name": "target",
+      "parameters": "x",
+      "expression": "tanh(4*x)"
+    }
+  ],
+  "settings": {
+    "mode": "Complex",
+    "bounds": {
+      "x_min": -4,
+      "x_max": 4,
+      "y_min": -3,
+      "y_max": 3
+    },
+    "samples": "1600",
+    "interval": [
+      "-1",
+      "1"
+    ],
+    "extrapolation": "15",
+    "grid": true,
+    "grid_step": "auto",
+    "nodes": true,
+    "values": true,
+    "weights": true,
+    "weighted_values": false,
+    "output": true,
+    "input_path": true,
+    "coloring": true,
+    "line_opacity": 1.0,
+    "color_opacity": 0.75,
+    "resolution": 640,
+    "domain_extent": "Percent",
+    "domain_margin": [
+      "0",
+      "0"
+    ],
+    "curve": "Bezier",
+    "control_points": [
+      [
+        -2,
+        -1
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        1,
+        -2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "curve_weights": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "analysis": {
+      "poles": true,
+      "zeros": true,
+      "residues": true
+    }
+  },
+  "fit": {
+    "function": "target",
+    "interval": [
+      "-1",
+      "1"
+    ],
+    "tolerance": "1e-13",
+    "max_nodes": "100",
+    "degree": "5",
+    "fixed_degree": false,
+    "sign": false,
+    "cleanup": true,
+    "lawson": "0",
+    "samples_per_gap": 3
+  }
+}

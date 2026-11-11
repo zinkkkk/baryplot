@@ -1,0 +1,175 @@
+{
+  "entries": [
+    {
+      "name": "p1",
+      "expressions": [
+        "-3",
+        "-1/5",
+        "1"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#61D6C2",
+      "real_y": [
+        0,
+        1.0,
+        -1.0
+      ]
+    },
+    {
+      "name": "p2",
+      "expressions": [
+        "0",
+        "1",
+        "-1/5"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#FFB86C",
+      "real_y": [
+        0,
+        1.2,
+        -1.2
+      ]
+    },
+    {
+      "name": "p3",
+      "expressions": [
+        "3",
+        "2/5",
+        "1"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#AB9DF2",
+      "real_y": [
+        0,
+        1.4,
+        -1.4
+      ]
+    }
+  ],
+  "globals": [
+    {
+      "kind": "NumericFunction",
+      "name": "target",
+      "parameters": "x",
+      "expression": "// Taylor series, with a direct fallback outside the fitting interval\nlet term = 1;\nlet total = 1;\nfor k in 1..=24 {\n    term *= x/k;\n    total += term;\n}\nif abs(x) <= 1 {\n    total\n} else {\n    exp(x)\n}"
+    }
+  ],
+  "settings": {
+    "mode": "Real",
+    "bounds": {
+      "x_min": -4,
+      "x_max": 4,
+      "y_min": -3,
+      "y_max": 3
+    },
+    "samples": "1600",
+    "interval": [
+      "-3",
+      "3"
+    ],
+    "extrapolation": "15",
+    "grid": true,
+    "grid_step": "auto",
+    "nodes": true,
+    "values": true,
+    "weights": true,
+    "weighted_values": false,
+    "output": true,
+    "input_path": true,
+    "coloring": true,
+    "line_opacity": 1.0,
+    "color_opacity": 0.75,
+    "resolution": 1024,
+    "domain_extent": "Percent",
+    "domain_margin": [
+      "0",
+      "0"
+    ],
+    "curve": "Bezier",
+    "control_points": [
+      [
+        -2.4,
+        -1.2
+      ],
+      [
+        -1,
+        2.2
+      ],
+      [
+        1.2,
+        2.2
+      ],
+      [
+        2.4,
+        -0.8
+      ]
+    ],
+    "curve_weights": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  "fit": {
+    "function": "target",
+    "method": "Nonlinear",
+    "sk_steps": "20",
+    "wf_steps": "20",
+    "refinement_tolerance": "1e-4",
+    "lawson_damping": "1",
+    "interval": [
+      "-1",
+      "1"
+    ],
+    "tolerance": "1e-10",
+    "max_nodes": "30",
+    "lawson": "0",
+    "cleanup": false
+  }
+}

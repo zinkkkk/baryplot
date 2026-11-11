@@ -1,0 +1,167 @@
+{
+  "entries": [
+    {
+      "name": "p1",
+      "expressions": [
+        "-2",
+        "-0.5",
+        "1"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#61D6C2",
+      "real_y": [
+        0,
+        1.0,
+        -1.0
+      ],
+      "imaginary": [
+        "-0.6",
+        "1.2",
+        "0"
+      ]
+    },
+    {
+      "name": "p2",
+      "expressions": [
+        "0.3",
+        "1.3",
+        "-0.7"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#FFB86C",
+      "real_y": [
+        0,
+        1.2,
+        -1.2
+      ],
+      "imaginary": [
+        "1.4",
+        "0.2",
+        "0.4"
+      ]
+    },
+    {
+      "name": "p3",
+      "expressions": [
+        "2",
+        "0.4",
+        "0.8"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#AB9DF2",
+      "real_y": [
+        0,
+        1.4,
+        -1.4
+      ],
+      "imaginary": [
+        "-0.4",
+        "-1",
+        "-0.25"
+      ]
+    }
+  ],
+  "globals": [],
+  "settings": {
+    "mode": "Complex",
+    "bounds": {
+      "x_min": -4,
+      "x_max": 4,
+      "y_min": -3,
+      "y_max": 3
+    },
+    "samples": "1600",
+    "interval": [
+      "-3",
+      "3"
+    ],
+    "extrapolation": "15",
+    "grid": true,
+    "grid_step": "auto",
+    "nodes": true,
+    "values": true,
+    "weights": true,
+    "weighted_values": false,
+    "output": true,
+    "input_path": true,
+    "coloring": true,
+    "line_opacity": 1.0,
+    "color_opacity": 0.75,
+    "resolution": 1024,
+    "domain_extent": "Percent",
+    "domain_margin": [
+      "0",
+      "0"
+    ],
+    "curve": "Bezier",
+    "control_points": [
+      [
+        -2.4,
+        -1.2
+      ],
+      [
+        -1,
+        2.2
+      ],
+      [
+        1.2,
+        2.2
+      ],
+      [
+        2.4,
+        -0.8
+      ]
+    ],
+    "curve_weights": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ]
+  }
+}

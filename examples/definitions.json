@@ -1,0 +1,183 @@
+{
+  "entries": [
+    {
+      "name": "p1",
+      "expressions": [
+        "-a",
+        "wave(p1[n], pi/4)",
+        "1"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#61D6C2",
+      "real_y": [
+        0,
+        1.0,
+        -1.0
+      ]
+    },
+    {
+      "name": "p2",
+      "expressions": [
+        "0",
+        "wave(p2[n], pi/4) + bias",
+        "-2"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#FFB86C",
+      "real_y": [
+        0,
+        1.2,
+        -1.2
+      ]
+    },
+    {
+      "name": "p3",
+      "expressions": [
+        "a",
+        "wave(p3[n], pi/4)",
+        "1"
+      ],
+      "locks": [
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ],
+        [
+          false,
+          false
+        ]
+      ],
+      "enabled": true,
+      "visible": true,
+      "color": "#AB9DF2",
+      "real_y": [
+        0,
+        1.4,
+        -1.4
+      ]
+    }
+  ],
+  "globals": [
+    {
+      "kind": "Variable",
+      "name": "a",
+      "parameters": "",
+      "expression": "2"
+    },
+    {
+      "kind": "Function",
+      "name": "wave",
+      "parameters": "x, phase",
+      "expression": "a*sin(x+phase)"
+    },
+    {
+      "kind": "Variable",
+      "name": "bias",
+      "parameters": "",
+      "expression": "p3[n]/4"
+    },
+    {
+      "kind": "Variable",
+      "name": "z0",
+      "parameters": "",
+      "expression": "2+3i"
+    },
+    {
+      "kind": "Function",
+      "name": "turn",
+      "parameters": "z, t",
+      "expression": "z*cis(t)"
+    }
+  ],
+  "settings": {
+    "mode": "Real",
+    "bounds": {
+      "x_min": -4,
+      "x_max": 4,
+      "y_min": -3,
+      "y_max": 3
+    },
+    "samples": "1600",
+    "interval": [
+      "-2",
+      "2"
+    ],
+    "extrapolation": "15",
+    "grid": true,
+    "grid_step": "auto",
+    "nodes": true,
+    "values": true,
+    "weights": true,
+    "weighted_values": false,
+    "output": true,
+    "input_path": true,
+    "coloring": true,
+    "line_opacity": 1.0,
+    "color_opacity": 0.75,
+    "resolution": 640,
+    "domain_extent": "Percent",
+    "domain_margin": [
+      "0",
+      "0"
+    ],
+    "curve": "Bezier",
+    "control_points": [
+      [
+        -2,
+        -1
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        1,
+        -2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "curve_weights": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ]
+  }
+}
