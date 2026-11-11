@@ -6,7 +6,7 @@ AAA, and explore their behaviour in the real or complex plane.
 
 [User guide](docs/guide.md) · [Examples](examples) · [MIT license](LICENSE)
 
-<img src="docs/images/complex.png" alt="Baryplot showing editable complex parameters, input and output curves, and domain colouring" width="70%">
+<img src="docs/images/complex.png" alt="Baryplot showing editable complex parameters, input and output curves, and domain colouring">
 
 ## Features
 
